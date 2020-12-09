@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/contstants.dart';
 import 'package:portfolio/widgets/headerComponents.dart';
+import 'package:portfolio/widgets/projectTile.dart';
 
 void main() {
   runApp(MyApp());
@@ -85,41 +86,17 @@ class Home extends StatelessWidget {
           SizedBox(height: 64),
 
           /// products
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 101),
-            child: Row(
-              children: [
-                /// header text
-                Expanded(
-                    flex: 3,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [],
-                    )),
+          ProjectTile(isLeftImage: false),
 
-                SizedBox(width: 64),
+          SizedBox(height: 64),
 
-                /// photo
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    width: 402,
-                    height: 335,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Color.fromRGBO(0, 0, 0, 0.1),
-                            offset: Offset(0, 0),
-                            blurRadius: 24)
-                      ],
-                      color: Color.fromRGBO(255, 255, 255, 1),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          ProjectTile(isLeftImage: true),
+
+          SizedBox(height: 64),
+
+          ProjectTile(isLeftImage: false),
+
+          SizedBox(height: 64),
         ],
       ),
     );
